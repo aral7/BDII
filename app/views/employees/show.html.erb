@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+
+<table border='1'>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Title</th>
+    <th>Title of courtesy</th>
+    <th>Birth date</th>
+    <th>Hire date</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Photo</th>
+  </tr>
+  <tr>
+    <td><%= @employee.FirstName %></td>
+    <td><%= @employee.LastName %></td>
+    <td><%= @employee.Title %></td>
+    <td><%= @employee.TitleOfCourtesy %></td>
+    <td><%= @employee.BirthDate %></td>
+    <td><%= @employee.HireDate %></td>
+    <td><%= @employee.Address %></td>
+    <td><%= @employee.City %></td>
+    <td><%= image_tag url_for(:action => 'show_photo', :id => @employee.EmployeeID) %></td>
+  </tr>
+</table>
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>
