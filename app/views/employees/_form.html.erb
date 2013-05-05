@@ -12,7 +12,22 @@
   <% end %>
 
   <div class="actions">
-    <%= f.text_field :FirstName %>
+    <p><label>First name</label>
+    <%= f.text_field :FirstName %></p>
+    <p><label>Last name</label>
+      <%= f.text_field :LastName %></p>
+    <p><label>Title</label>
+      <%= f.text_field :Title %></p>
+    <p><label>Title of courtesy</label>
+      <%= f.text_field :TitleOfCourtesy %></p>
+    <p><label>Birth date</label>
+      <%= f.text_field :BirthDate %></p>
+    <p><label>Hire date</label>
+      <%= f.text_field :HireDate %></p>
+    <p><label>Address</label>
+      <%= f.text_field :Address %></p>
+    <p><label>City</label>
+      <%= f.text_field :City %></p>
     <%= f.submit %>
   </div>
 <% end %>

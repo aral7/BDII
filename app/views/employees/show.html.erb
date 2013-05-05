@@ -12,6 +12,7 @@
     <th>Address</th>
     <th>City</th>
     <th>Photo</th>
+    <th>Reports to</th>
   </tr>
   <tr>
     <td><%= @employee.FirstName %></td>
@@ -23,6 +24,7 @@
     <td><%= @employee.Address %></td>
     <td><%= @employee.City %></td>
     <td><%= image_tag url_for(:action => 'show_photo', :id => @employee.EmployeeID) %></td>
+    <td><%= link_to @employee.employee.FirstName + ' ' + @employee.employee.LastName, @employee.employee if @employee.employee != nil %></td>
   </tr>
 </table>
 <%= link_to 'Edit', edit_employee_path(@employee) %> |

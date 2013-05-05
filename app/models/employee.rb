@@ -1,6 +1,6 @@
 class Employee < ActiveRecord::Base
   self.primary_key= 'EmployeeID'
   self.table_name = 'Employees'
-  has_one :ReportsTo, :class_name => 'Employee'
-  attr_accessible :FirstName, :LastName
+  belongs_to :employee, :foreign_key => 'ReportsTo', :primary_key => 'EmployeeID'
+  attr_accessible :FirstName, :LastName, :Photo, :City, :Address, :Title, :TitleOfCourtesy, :BirthDate, :HireDate
 end
