@@ -1,10 +1,19 @@
 RubyNorth::Application.routes.draw do
 
+  resources :orders
+  resources :orderdetails
   resources :shippers
   root :to => 'employees#index'
   resources :employees
   match 'employees/:id/show_photo' => 'employees#show_photo'
-
+  match 'DbTest/parseOrders' => 'DbTest#parseOrders'
+  match 'DbTest/parseOrderDetails' => 'DbTest#parseOrderDetails'
+  match 'DbTest/orders_by_country' => 'DbTest#orders_by_country'
+  match 'DbTest/avg_time_by_year' => 'DbTest#avg_time_by_year'
+  match 'DbTest/products_by_supplier' => 'DbTest#products_by_supplier'
+  match 'DbTest/amount_by_day' => 'DbTest#amount_by_day'
+  match 'DbTest/amount_by_country' => 'DbTest#amount_by_country'
+  match 'DbTest/product_val_by_supplieryear' => 'DbTest#product_val_by_supplieryear'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

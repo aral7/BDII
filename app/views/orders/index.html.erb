@@ -1,0 +1,39 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= link_to order.OrderID, order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_order_path %>
+<br/>
+<%= Rails.root + "public/data/orders_rand_10000.xml" %>
+<br/>
+<%= link_to 'Get new orders', :controller => "DbTest", :action => "parseOrders" %>
+<br/>
+<%= link_to 'Get new order details', :controller => "DbTest", :action => "parseOrderDetails" %>
+<br/>
+<%= link_to 'First point', :controller => "DbTest", :action => "orders_by_country" %>
+<br/>
+<%= link_to 'Second point', :controller => "DbTest", :action => "avg_time_by_year" %>
+<br/>
+<%= link_to 'Third point', :controller => "DbTest", :action => "products_by_supplier" %>
+<br/>
+<%= link_to '4th point', :controller => "DbTest", :action => "amount_by_day" %>
+<br/>
+<%= link_to '5th point', :controller => "DbTest", :action => "amount_by_country" %>
+<br/>
+<%= link_to '6th point', :controller => "DbTest", :action => "product_val_by_supplieryear" %>

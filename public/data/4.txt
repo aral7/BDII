@@ -1,0 +1,8 @@
+Sunday had 23202663.19 amount 
+Monday had 23492393.85 amount 
+Wednesday had 20953177.14 amount 
+Thursday had 21045202.38 amount 
+Tuesday had 22106655.76 amount 
+Saturday had 22326957.07 amount 
+Friday had 21548881.45 amount 
+Time: 75.67

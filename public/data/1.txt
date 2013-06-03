@@ -1,0 +1,22 @@
+Norway got 89 orders 
+Italy got 336 orders 
+Finland got 284 orders 
+Germany got 1483 orders 
+Belgium got 233 orders 
+Sweden got 429 orders 
+Poland got 83 orders 
+United Kingdom got 648 orders 
+Spain got 244 orders 
+Venezuela got 585 orders 
+Argentina got 186 orders 
+Ireland got 244 orders 
+Denmark got 207 orders 
+Canada got 363 orders 
+Mexico got 353 orders 
+Switzerland got 202 orders 
+Brazil got 1024 orders 
+Austria got 500 orders 
+Portugal got 165 orders 
+United States got 1456 orders 
+France got 886 orders 
+Time: 1.47999999999999

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130504162652) do
+ActiveRecord::Schema.define(:version => 0) do
 
   create_table "Categories", :primary_key => "CategoryID", :force => true do |t|
     t.text   "CategoryName"
@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(:version => 20130504162652) do
   create_table "CustomerDemographics", :primary_key => "CustomerTypeID", :force => true do |t|
     t.text "CustomerDesc"
   end
-
-  add_index "CustomerDemographics", ["CustomerTypeID"], :name => "sqlite_autoindex_CustomerDemographics_1", :unique => true
 
   create_table "Customers", :primary_key => "CustomerID", :force => true do |t|
     t.text "CompanyName"
@@ -69,9 +67,6 @@ ActiveRecord::Schema.define(:version => 20130504162652) do
     t.text    "PhotoPath"
   end
 
-# Could not dump table "Order Details" because of following StandardError
-#   Unknown type 'REAL' for column 'Discount'
-
   create_table "Orders", :primary_key => "OrderID", :force => true do |t|
     t.text     "CustomerID"
     t.integer  "EmployeeID"
@@ -85,7 +80,7 @@ ActiveRecord::Schema.define(:version => 20130504162652) do
     t.text     "ShipCity"
     t.text     "ShipRegion"
     t.text     "ShipPostalCode"
-    t.text     "ShipCountry"
+      t.text     "ShipCountry"
   end
 
   create_table "Products", :primary_key => "ProductID", :force => true do |t|
@@ -129,5 +124,14 @@ ActiveRecord::Schema.define(:version => 20130504162652) do
   end
 
   add_index "Territories", ["TerritoryID"], :name => "sqlite_autoindex_Territories_1", :unique => true
+
+  create_table "orderdetails", :primary_key => "odID", :force => true do |t|
+    t.integer "OrderID",                    :null => false
+    t.integer "ProductID",                  :null => false
+    t.decimal "UnitPrice", :default => 0.0, :null => false
+    t.integer "Quantity",  :default => 1,   :null => false
+    t.decimal "Discount",  :default => 0.0, :null => false
+    t.integer "odID"
+  end
 
 end
